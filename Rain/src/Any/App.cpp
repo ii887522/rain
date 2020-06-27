@@ -1,7 +1,9 @@
 #define GLFW_INCLUDE_VULKAN
+#define STB_IMAGE_IMPLEMENTATION
 
 #include "App.h"
 #include <GLFW/glfw3.h>
+#include <stb_image.h>
 #include "../Struct/Size2D.h"
 #include "../Functions/callbacks.h"
 #include "constants.h"
@@ -48,6 +50,7 @@ namespace ii887522::Rain
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 		glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 		window = glfwCreateWindow(windowSize.w, windowSize.h, "Rain", nullptr, nullptr);
+		ico.pixels = stbi_load("res/drop.png", &ico.width, &ico.height, nullptr, STBI_rgb_alpha);
 		configureWindow();
 		initVulkan();
 	}
@@ -59,6 +62,7 @@ namespace ii887522::Rain
 		glfwSetWindowSizeLimits(window, static_cast<int>(minHeight * aspectRatio), minHeight, windowSize.w, windowSize.h);
 		glfwSetCursorPosCallback(window, reactMouseMove);
 		glfwSetWindowSizeCallback(window, reactWindowResize);
+		glfwSetWindowIcon(window, 1, &ico);
 	}
 
 	void App::initVulkan()
@@ -886,6 +890,7 @@ namespace ii887522::Rain
 		vkDestroySurfaceKHR(instance, surface, nullptr);
 		if constexpr (isDebugging) destroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr);
 		vkDestroyInstance(instance, nullptr);
+		stbi_image_free(ico.pixels);
 		glfwDestroyWindow(window);
 		glfwTerminate();
 	}
