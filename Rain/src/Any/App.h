@@ -29,6 +29,7 @@ namespace ii887522::Rain
 		App& operator=(App&&) = delete;
 
 		GLFWwindow* window;
+		GLFWimage ico;
 		VkInstance instance;
 		VkDebugUtilsMessengerEXT debugMessenger;
 		VkSurfaceKHR surface;
