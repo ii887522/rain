@@ -33,17 +33,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\fragment_shader.spv">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\vertex_shader.spv">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="src\Shaders\fragment_shader.glsl">
       <Filter>Source Files\Shaders</Filter>
     </None>
     <None Include="src\Shaders\vertex_shader.glsl">
       <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="res\main\fragment_shader.spv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\main\vertex_shader.spv">
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +159,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\drop.png">
+    <Image Include="res\main\drop.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
