@@ -7,8 +7,8 @@ using std::exception;
 namespace ii887522::Rain
 {
 	GraphicsPipelineFactory::GraphicsPipelineFactory(const VkDevice device, const Size2D size, const VkPipelineLayout pipelineLayout,
-		const VkRenderPass renderPass) : device{ device }, vertexShaderModule{ ShaderModuleFactory{ "res/vertex_shader.spv" }.make(device) },
-		fragmentShaderModule{ ShaderModuleFactory{ "res/fragment_shader.spv" }.make(device) }, shaderStageCreateInfos{
+		const VkRenderPass renderPass) : device{ device }, vertexShaderModule{ ShaderModuleFactory{ "res/main/vertex_shader.spv" }.make(device) },
+		fragmentShaderModule{ ShaderModuleFactory{ "res/main/fragment_shader.spv" }.make(device) }, shaderStageCreateInfos{
 			makePipelineShaderStageCreateInfo(vertexShaderModule, VK_SHADER_STAGE_VERTEX_BIT),
 			makePipelineShaderStageCreateInfo(fragmentShaderModule, VK_SHADER_STAGE_FRAGMENT_BIT)
 		}, modelAttributeDescription{ makeModelAttributeDescription() },

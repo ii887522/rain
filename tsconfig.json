@@ -1,0 +1,25 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "assumeChangesOnlyAffectDirectDependencies": false,
+        "disableSolutionSearching": false,
+        "forceConsistentCasingInFileNames": true,
+        "importsNotUsedAsValues": "remove",
+        "jsx": "react",
+        "jsxFactory": "React.createElement",
+        "module": "ES6",
+        "moduleResolution": "Node",
+        "noEmitOnError": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "outDir": "scripts/out",
+        "rootDir": "scripts/src",
+        "strict": true,
+        "target": "ES6"
+    },
+    "typeAcquisition": {
+        "enable": true
+    }
+}

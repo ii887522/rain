@@ -50,7 +50,7 @@ namespace ii887522::Rain
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 		glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 		window = glfwCreateWindow(windowSize.w, windowSize.h, "Rain", nullptr, nullptr);
-		ico.pixels = stbi_load("res/drop.png", &ico.width, &ico.height, nullptr, STBI_rgb_alpha);
+		ico.pixels = stbi_load("res/main/drop.png", &ico.width, &ico.height, nullptr, STBI_rgb_alpha);
 		configureWindow();
 		initVulkan();
 	}
