@@ -1,7 +1,7 @@
 # Rain
 It is a raining simulation using Vulkan API.
 
-![Rain Screen](https://github.com/ii887522/rain/blob/main/docs/rain.png)
+![Rain Screen](https://github.com/ii887522/rain/blob/master/docs/rain.png)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See bundling for notes on how to bundle the project for starting the calculator and distribution.
