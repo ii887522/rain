@@ -18,6 +18,7 @@
     "url": "https://github.com/ii887522/rain/issues"
   },
   "homepage": "https://github.com/ii887522/rain#readme",
+  "keywords": ["cpp", "vulkan"],
   "type": "module",
   "dependencies": {
     "create-desktop-shortcuts": "^1.0.2",
