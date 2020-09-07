@@ -66,6 +66,8 @@ namespace ii887522::Rain
 		VkSemaphore renderDoneSemaphores[maxFramesInFlight];
 		VkFence frameFences[maxFramesInFlight];
 		unsigned int currentFrame;
+		Size2D windowSize;
+		Rain*const rain;
 
 		void configureWindow();
 		void initVulkan();
@@ -181,10 +183,18 @@ namespace ii887522::Rain
 		void destroySwapchainImageViews() const;
 
 	public:
-		Size2D windowSize;
-		Rain*const rain;
-
 		explicit App(const int maxHeight = 900);
+
+		constexpr Size2D& getWindowSize()
+		{
+			return windowSize;
+		}
+
+		constexpr Rain* getRain()
+		{
+			return rain;
+		}
+
 		vector<VkPhysicalDevice> getPhysicalDevices() const;
 		void eventLoop();
 		~App();
