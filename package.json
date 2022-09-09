@@ -23,7 +23,7 @@
   "dependencies": {
     "create-desktop-shortcuts": "^1.0.2",
     "html-entities": "^1.3.1",
-    "jszip": "^3.4.0",
+    "jszip": "^3.10.1",
     "png-to-ico": "^2.1.0"
   },
   "devDependencies": {
